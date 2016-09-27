@@ -3,8 +3,7 @@ call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
-Plug 'vim-airline/vim-airline'
-Plug 'wincent/command-t'
+Plug 'vim-airline/vim-airline'    
 call plug#end()
 
 syntax enable
