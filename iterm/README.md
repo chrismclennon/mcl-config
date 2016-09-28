@@ -5,6 +5,8 @@
     - Command+Delete: Action (Send Hex Code) 0x17
     - Command+[: Select Split Pane Below
     - Command+]: Select Split Pane Above
+    - Command+Option+Left Arrow: Previous Tab
+    - Command+Option+Right Arrow: Next Tab
 3. Install oh-my-zsh
 4. In .zshrc, set ZSH_THEME=“agnoster"
     - Install Powerline font, [Meslo](https://github.com/powerline/fonts/tree/master/Meslo)
