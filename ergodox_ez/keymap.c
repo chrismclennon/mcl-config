@@ -1,10 +1,10 @@
 // Media keys work on OSX, but not on Windows.
-#include "ergodox_ez.h"
+#include "ergodox.h"
 #include "debug.h"
 #include "action_layer.h"
 
-#define BASE 0 // default layer
-#define AUXI 1 // auxiliary layer
+#define BASE 0  // Default layer
+#define AUXI 1  // Auxiliary layer
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic Layer
@@ -21,7 +21,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *   |LCtrl |      |      |      |  Esc |                                       |      |      |      |      |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        |      |      |       |      |      |
+ *                                        |      |      |       |Power |      |
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      |      |       |      |        |      |
  *                                 | LGui | LAlt |------|       |------|  Bkspc |Space |
@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                     KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN,KC_ENT,
         KC_RBRC,    KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,KC_QUOT,
                          KC_TRNS,   KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
-        KC_TRNS,    KC_TRNS,
+        KC_PWR,    KC_TRNS,
         KC_TRNS,
         KC_DELETE,    KC_BSPC, KC_SPC
     ),
@@ -89,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                  KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT,KC_TRNS, KC_TRNS,
        KC_TRNS,  KC_MPRV, KC_MNXT, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                           KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_TRNS,
+       KC_PWR, KC_TRNS,
        KC_TRNS,
        KC_DELETE, KC_BSPC, KC_SPC
 ),
@@ -101,15 +101,15 @@ const uint16_t PROGMEM fn_actions[] = {
 
 const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 {
-  // MACRODOWN only works in this function
+      // MACRODOWN only works in this function
       switch(id) {
         case 0:
-        if (record->event.pressed) {
-          register_code(KC_RSFT);
-        } else {
-          unregister_code(KC_RSFT);
-        }
-        break;
+          if (record->event.pressed) {
+            register_code(KC_RSFT);
+          } else {
+            unregister_code(KC_RSFT);
+          }
+          break;
       }
     return MACRO_NONE;
 };
