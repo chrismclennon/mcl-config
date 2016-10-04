@@ -1,10 +1,10 @@
 1. Install iTerm2
-2. Set up hotkeys.
+2. Set up hotkeys in a profile.
     - Option+Left Arrow: Action (Send Escape Sequence) b
     - Option+Right Arrow: Action (Send Escape Sequence) f
     - Command+Delete: Action (Send Hex Code) 0x17
-    - Command+[: Select Split Pane Below
-    - Command+]: Select Split Pane Above
+    - Command+[: Previous Pane
+    - Command+]: Next Pane
     - Command+Option+Left Arrow: Previous Tab
     - Command+Option+Right Arrow: Next Tab
 3. Install oh-my-zsh
