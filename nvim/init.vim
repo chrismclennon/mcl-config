@@ -3,8 +3,12 @@ call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
-Plug 'vim-airline/vim-airline'    
+Plug 'vim-airline/vim-airline'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
+
+" Use deoplete
+let g:deoplete#enable_at_startup = 1
 
 syntax enable
 set smartindent
@@ -24,3 +28,4 @@ set cinkeys-=0#
 set indentkeys-=0#
 
 set ignorecase
+
