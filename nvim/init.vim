@@ -10,6 +10,9 @@ call plug#end()
 " Use deoplete
 let g:deoplete#enable_at_startup = 1
 
+" Keymaps
+map <C-n> :NERDTreeToggle<CR>
+
 syntax enable
 set smartindent
 set expandtab
