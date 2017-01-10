@@ -12,8 +12,17 @@ call plug#end()
 let g:deoplete#enable_at_startup = 1
 
 " Keymaps
+function! g:TogglePEP8()
+    if &colorcolumn != ''
+        setlocal colorcolumn&
+    else
+        setlocal colorcolumn=80
+    endif
+endfunction
+map <C-l> :call g:TogglePEP8()<CR>
 map <C-n> :NERDTreeToggle<CR>
 
+" nvim settings
 syntax enable
 set smartindent
 set expandtab
